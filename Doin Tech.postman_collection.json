@@ -1,0 +1,752 @@
+{
+  "info": {
+    "_postman_id": "b0462210-8399-48d4-9181-a14764184695",
+    "name": "Doin Tech",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "14943793",
+    "_collection_link": "https://go.postman.co/collection/14943793-b0462210-8399-48d4-9181-a14764184695?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "Register Request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\": \"aryan\", \"password\": \"mypassword123\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/auth/register",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Register Request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"aryan\", \"password\": \"mypassword123\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/auth/register",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "auth",
+                "register"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept"
+            },
+            {
+              "key": "Allow",
+              "value": "OPTIONS, POST"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "71"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Server",
+              "value": "daphne"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"username\": \"aryan\",\n    \"token\": \"7fa9200beddf043872956798eeb342b4c265f22d\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "login request",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\"username\": \"testuser\", \"password\": \"testpass123\"}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/auth/token",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "auth",
+            "token"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "login request",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\"username\": \"testuser\", \"password\": \"testpass123\"}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/auth/token",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "auth",
+                "token"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept"
+            },
+            {
+              "key": "Allow",
+              "value": "OPTIONS, POST"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "52"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Server",
+              "value": "daphne"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"token\": \"9e0bcf13370c30f71b3c2e9c351c5a23f1f57cf6\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/health",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "health"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Health Check",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/health",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "health"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "16"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Server",
+              "value": "daphne"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"status\": \"ok\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Signal Webhook",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{api_key_value}}",
+              "type": "string"
+            },
+            {
+              "key": "in",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Authorization",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "x-api-key",
+            "value": "",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"signal\": \"BUY EURUSD @1.0860\\nSL 1.0850\\nTP 1.0890\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/webhook/receive-signal",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "webhook",
+            "receive-signal"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Signal Webhook",
+          "originalRequest": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "x-api-key",
+                "value": "",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"signal\": \"BUY EURUSD @1.0860\\nSL 1.0850\\nTP 1.0890\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/webhook/receive-signal",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "webhook",
+                "receive-signal"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept"
+            },
+            {
+              "key": "Allow",
+              "value": "OPTIONS, POST"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "70"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Server",
+              "value": "daphne"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"order_id\": \"34d71fe1-2163-40c2-8f9f-de61b296ac75\",\n    \"status\": \"pending\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Get Orders",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{api_key_value}}",
+              "type": "string"
+            },
+            {
+              "key": "in",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Authorization",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/orders",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "orders"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Orders",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/orders",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "orders"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1041"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Server",
+              "value": "daphne"
+            }
+          ],
+          "cookie": [],
+          "body": "[\n    {\n        \"id\": 4,\n        \"order_id\": \"34d71fe1-2163-40c2-8f9f-de61b296ac75\",\n        \"instrument\": \"EURUSD\",\n        \"action\": \"BUY\",\n        \"entry_price\": 1.086,\n        \"stop_loss\": 1.085,\n        \"take_profit\": 1.089,\n        \"status\": \"executed\",\n        \"created_at\": \"2026-02-20T11:10:41.895127Z\",\n        \"updated_at\": \"2026-02-20T11:10:46.902154Z\"\n    },\n    {\n        \"id\": 3,\n        \"order_id\": \"417a3fb0-4f93-412b-8f9d-49b31b1f15c1\",\n        \"instrument\": \"EURUSD\",\n        \"action\": \"BUY\",\n        \"entry_price\": 1.086,\n        \"stop_loss\": 1.085,\n        \"take_profit\": 1.089,\n        \"status\": \"executed\",\n        \"created_at\": \"2026-02-20T11:03:07.700853Z\",\n        \"updated_at\": \"2026-02-20T11:03:12.708463Z\"\n    },\n    {\n        \"id\": 2,\n        \"order_id\": \"bd7367fa-fd85-4035-9da6-a9172dd1eb17\",\n        \"instrument\": \"EURUSD\",\n        \"action\": \"BUY\",\n        \"entry_price\": 1.086,\n        \"stop_loss\": 1.085,\n        \"take_profit\": 1.089,\n        \"status\": \"executed\",\n        \"created_at\": \"2026-02-20T11:00:58.255071Z\",\n        \"updated_at\": \"2026-02-20T11:01:03.262141Z\"\n    },\n    {\n        \"id\": 1,\n        \"order_id\": \"510d784a-82c0-4f6f-9e39-8a5c090b37ba\",\n        \"instrument\": \"EURUSD\",\n        \"action\": \"BUY\",\n        \"entry_price\": 1.086,\n        \"stop_loss\": 1.085,\n        \"take_profit\": 1.089,\n        \"status\": \"executed\",\n        \"created_at\": \"2026-02-20T10:59:18.708017Z\",\n        \"updated_at\": \"2026-02-20T10:59:23.715072Z\"\n    }\n]"
+        }
+      ]
+    },
+    {
+      "name": "Get Order Details",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "{{api_key_value}}",
+              "type": "string"
+            },
+            {
+              "key": "in",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Authorization",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{url}}/orders/34d71fe1-2163-40c2-8f9f-de61b296ac75",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "orders",
+            "34d71fe1-2163-40c2-8f9f-de61b296ac75"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Get Order Details",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{url}}/orders/34d71fe1-2163-40c2-8f9f-de61b296ac75",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "orders",
+                "34d71fe1-2163-40c2-8f9f-de61b296ac75"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept"
+            },
+            {
+              "key": "Allow",
+              "value": "GET, OPTIONS"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "259"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Server",
+              "value": "daphne"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 4,\n    \"order_id\": \"34d71fe1-2163-40c2-8f9f-de61b296ac75\",\n    \"instrument\": \"EURUSD\",\n    \"action\": \"BUY\",\n    \"entry_price\": 1.086,\n    \"stop_loss\": 1.085,\n    \"take_profit\": 1.089,\n    \"status\": \"executed\",\n    \"created_at\": \"2026-02-20T11:10:41.895127Z\",\n    \"updated_at\": \"2026-02-20T11:10:46.902154Z\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "Link Broker Account",
+      "request": {
+        "auth": {
+          "type": "apikey",
+          "apikey": [
+            {
+              "key": "value",
+              "value": "Token 9e0bcf13370c30f71b3c2e9c351c5a23f1f57cf6",
+              "type": "string"
+            },
+            {
+              "key": "in",
+              "value": "header",
+              "type": "string"
+            },
+            {
+              "key": "key",
+              "value": "Authorization",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"account_id\": \"MT12345\",\n  \"broker_name\": \"MetaTrader\",\n  \"api_key\": \"my-secret-key\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{url}}/accounts",
+          "host": [
+            "{{url}}"
+          ],
+          "path": [
+            "accounts"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "Link Broker Account",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"account_id\": \"MT12345\",\n  \"broker_name\": \"MetaTrader\",\n  \"api_key\": \"my-secret-key\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{url}}/accounts",
+              "host": [
+                "{{url}}"
+              ],
+              "path": [
+                "accounts"
+              ]
+            }
+          },
+          "status": "Created",
+          "code": 201,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/json"
+            },
+            {
+              "key": "Vary",
+              "value": "Accept"
+            },
+            {
+              "key": "Allow",
+              "value": "OPTIONS, POST"
+            },
+            {
+              "key": "X-Frame-Options",
+              "value": "DENY"
+            },
+            {
+              "key": "Content-Length",
+              "value": "118"
+            },
+            {
+              "key": "X-Content-Type-Options",
+              "value": "nosniff"
+            },
+            {
+              "key": "Referrer-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Cross-Origin-Opener-Policy",
+              "value": "same-origin"
+            },
+            {
+              "key": "Server",
+              "value": "daphne"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"id\": 3,\n    \"account_id\": \"MT12345\",\n    \"broker_name\": \"MetaTrader\",\n    \"is_active\": true,\n    \"created_at\": \"2026-02-20T11:25:52.423957Z\"\n}"
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "url",
+      "value": "http://127.0.0.1:8000"
+    },
+    {
+      "key": "token",
+      "value": "9e0bcf13370c30f71b3c2e9c351c5a23f1f57cf6"
+    },
+    {
+      "key": "api_key_value",
+      "value": "Token 9e0bcf13370c30f71b3c2e9c351c5a23f1f57cf6"
+    }
+  ]
+}
