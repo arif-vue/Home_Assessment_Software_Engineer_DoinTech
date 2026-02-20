@@ -31,6 +31,9 @@ python manage.py migrate
 ```
 python manage.py createsuperuser
 ```
+After creating the superuser, go to the admin panel with your username and password:
+`http://127.0.0.1:8000/admin/`
+
 **Start the server**
 ```
 python manage.py runserver
