@@ -1,10 +1,11 @@
 from django.http import JsonResponse
+from django.contrib.auth import authenticate
 from rest_framework.decorators import api_view, authentication_classes, permission_classes
 from rest_framework.authentication import TokenAuthentication
 from rest_framework.permissions import IsAuthenticated
+from rest_framework.authtoken.models import Token
 from rest_framework.response import Response
 from rest_framework import status
-from django.db.models import Count, Q
 from core.models import BrokerAccount, Signal, Order, UserActivityLog
 from core.serializers import BrokerAccountSerializer, OrderSerializer
 from core import services
@@ -12,6 +13,19 @@ from core import services
 
 def health_check(request):
     return JsonResponse({'status': 'ok'})
+
+
+@api_view(['POST'])
+@authentication_classes([])
+@permission_classes([])
+def obtain_token(request):
+    username = request.data.get('username')
+    password = request.data.get('password')
+    user = authenticate(username=username, password=password)
+    if not user:
+        return Response({'error': 'Invalid username or password.'}, status=status.HTTP_401_UNAUTHORIZED)
+    token, _ = Token.objects.get_or_create(user=user)
+    return Response({'token': token.key})
 
 
 @api_view(['POST'])
@@ -31,7 +45,7 @@ def link_broker_account(request):
 def receive_signal(request):
     raw_text = request.data.get('signal', '').strip()
     if not raw_text:
-        return Response({'error': 'signal field is required.'}, status=status.HTTP_400_BAD_REQUEST)
+        return Response({'error': 'signal is required.'}, status=status.HTTP_400_BAD_REQUEST)
 
     parsed, error = services.parse_signal(raw_text)
     if error:
